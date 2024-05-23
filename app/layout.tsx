@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Figtree } from 'next/font/google';
+
 import './globals.css';
+import { cn } from '@/lib/utils';
 
 const font = Figtree({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -22,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={font.className}>{children}</body>
+      <body className={cn('text-[#333333]', font.className)}>{children}</body>
     </html>
   );
 }
