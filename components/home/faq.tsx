@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import Pill from './pill';
+import Pill from '../pill';
 
 export default function FAQ() {
   return (

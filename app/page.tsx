@@ -1,4 +1,4 @@
-import FAQ from '@/components/faq';
+import FAQ from '@/components/home/faq';
 import Footer from '@/components/footer';
 import Brands from '@/components/home/brands';
 import Reviews from '@/components/home/reviews';
