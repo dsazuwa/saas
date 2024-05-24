@@ -8,7 +8,7 @@ import Pill from './pill';
 
 export default function FAQ() {
   return (
-    <section className='space-y-10'>
+    <section className='mx-auto w-full max-w-screen-lg space-y-10'>
       <div className='flex flex-col items-center gap-1'>
         <Pill>FAQs</Pill>
 
@@ -17,7 +17,7 @@ export default function FAQ() {
         </h2>
       </div>
 
-      <Accordion type='single' collapsible>
+      <Accordion type='single' collapsible className='mx-auto max-w-4xl'>
         {questions.map(({ title, content }, index) => (
           <AccordionItem key={`question-${index}`} value={`question-${index}`}>
             <AccordionTrigger>{title}</AccordionTrigger>
