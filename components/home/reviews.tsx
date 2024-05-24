@@ -25,7 +25,6 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <Review key={`review-${index}`} review={review} />
           ))}
-          <div />
         </div>
       </div>
     </section>
@@ -46,7 +45,7 @@ function Review({ review: { review, name, location, image } }: ReviewProps) {
         </div>
       </div>
 
-      <div className='aspect-[5/5.569] w-full sm:max-w-52'>
+      <div className='aspect-[5/5.569] w-full max-sm:flex-1 sm:max-w-52'>
         <img
           src={image}
           alt={name + ' headshot'}
