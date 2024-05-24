@@ -3,7 +3,7 @@
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 
-import Pill from './pill';
+import Pill from '../pill';
 
 export default function Reviews() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -70,34 +70,34 @@ const reviews: TReview[] = [
       'Etiam laoreet, ligula in vehicula pretium, nulla erat eleifend enim, id lobortis urna ex et ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
     name: 'Tanya Russel',
     location: 'Houston, TX',
-    image: '/images/tanya.jpg',
+    image: '/images/clients/tanya.jpg',
   },
   {
     review:
       'Fusce pulvinar volutpat erat, quis tincidunt eros pellentesque in. Phasellus vehicula tellus est, at volutpat lectus eleifend ac. Sed id enim dictum, tristique metus vel, ultricies est.',
     name: 'Mark Terry',
     location: 'Columbia, SC',
-    image: '/images/mark.jpg',
+    image: '/images/clients/mark.jpg',
   },
   {
     review:
       'Pellentesque sit amet ornare magna, in dignissim velit. Morbi placerat, leo id fringilla dapibus, enim tellus dignissim magna, at tincidunt sem orci nec nisl.',
     name: 'Nikki Hankins',
     location: 'Berkeley, CA',
-    image: '/images/nikki.jpg',
+    image: '/images/clients/nikki.jpg',
   },
   {
     review:
       'Vivamus pulvinar sem mauris, nec gravida massa luctus nec. In sed condimentum ex. Mauris tortor tortor, venenatis sed est egestas, congue consectetur est. Morbi vulputate risus eu hendrerit mattis.',
     name: 'Jamees Flores',
     location: 'Toledo, OH',
-    image: '/images/james.jpg',
+    image: '/images/clients/james.jpg',
   },
   {
     review:
       'Aenean justo metus, pulvinar quis dictum et, pellentesque at metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
     name: 'Willie C. Shealey',
     location: 'Fort Washington, PA',
-    image: '/images/willie.jpg',
+    image: '/images/clients/willie.jpg',
   },
 ];

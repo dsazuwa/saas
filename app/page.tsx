@@ -1,6 +1,6 @@
 import FAQ from '@/components/faq';
 import Footer from '@/components/footer';
-import Reviews from '@/components/reviews';
+import Reviews from '@/components/home/reviews';
 
 export default function Home() {
   return (
