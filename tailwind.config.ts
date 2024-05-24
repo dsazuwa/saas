@@ -22,6 +22,9 @@ const config = {
         md: '50px',
       },
 
+      gridTemplateColumns: {
+        footer: 'repeat(auto-fit, minmax(10rem, 1fr))',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
