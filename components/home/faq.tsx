@@ -8,7 +8,7 @@ import Pill from '../pill';
 
 export default function FAQ() {
   return (
-    <section className='mx-auto w-full max-w-screen-lg space-y-10 px-6'>
+    <section className='mx-auto w-full max-w-screen-xl space-y-10 px-6'>
       <div className='flex flex-col items-center gap-1'>
         <Pill>FAQs</Pill>
 

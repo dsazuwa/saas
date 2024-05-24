@@ -10,7 +10,7 @@ export default function Brands() {
 
   return (
     <section className='flex flex-col gap-6'>
-      <p className='mx-auto max-w-screen-lg px-6 text-center'>
+      <p className='mx-auto max-w-screen-xl px-6 text-center'>
         Worldwide Confidence: 2,000+ Businesses Trusting in Global Impact
       </p>
 
