@@ -8,26 +8,22 @@ export default function Brands() {
     AutoScroll({ playOnInit: true, speed: 1 }),
   ]);
 
-  const x = brands.map((brand) => [brand, brand, brand]).flat();
-
   return (
     <section className='flex flex-col gap-6'>
-      <p className='mx-auto max-w-screen-lg text-center'>
+      <p className='mx-auto max-w-screen-lg px-6 text-center'>
         Worldwide Confidence: 2,000+ Businesses Trusting in Global Impact
       </p>
 
-      <div className='embla mx-auto' ref={emblaRef}>
+      <div className='embla' ref={emblaRef}>
         <div className='embla__container'>
-          {brands
-            .flatMap((brand) => [brand, brand, brand])
-            .map(({ name, src }, index) => (
-              <div
-                key={`brand-${index}`}
-                className='embla__slide mr-20 grayscale'
-              >
-                <img src={src} alt={name} />
-              </div>
-            ))}
+          {expandedBrands.map(({ name, src }, index) => (
+            <div
+              key={`brand-${index}`}
+              className='embla__slide mr-10 grayscale md:mr-20'
+            >
+              <img src={src} alt={name} />
+            </div>
+          ))}
           <div />
         </div>
       </div>
@@ -35,7 +31,9 @@ export default function Brands() {
   );
 }
 
-const brands = [
+type TBrand = { name: string; src: string };
+
+const brands: TBrand[] = [
   { name: 'Capsule', src: '/images/logos/capsule.svg' },
   { name: 'Command+R', src: '/images/logos/command-r.svg' },
   { name: 'Hourglass', src: '/images/logos/hourglass.svg' },
@@ -44,3 +42,7 @@ const brands = [
   { name: 'Spherule', src: '/images/logos/spherule.svg' },
   { name: 'Webflow', src: '/images/logos/webflow.svg' },
 ];
+
+const expandedBrands: TBrand[] = Array(3)
+  .fill(brands)
+  .flatMap((arr) => arr);
