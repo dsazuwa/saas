@@ -1,10 +1,15 @@
 import FAQ from '@/components/faq';
 import Footer from '@/components/footer';
+import Reviews from '@/components/reviews';
 
 export default function Home() {
   return (
     <>
-      <FAQ />
+      <main className='flex w-full flex-col gap-[10vh] pb-[10vh]'>
+        <Reviews />
+        <FAQ />
+      </main>
+
       <Footer />
     </>
   );
