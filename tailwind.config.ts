@@ -25,6 +25,11 @@ const config = {
       gridTemplateColumns: {
         footer: 'repeat(auto-fit, minmax(10rem, 1fr))',
       },
+
+      backgroundImage: {
+        'img-blur': "url('/images/overview/background-image.png')",
+      },
+
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
