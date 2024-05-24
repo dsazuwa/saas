@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      borderRadius: {
+        md: '50px',
+      },
+
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
