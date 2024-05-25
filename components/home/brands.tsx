@@ -9,8 +9,8 @@ export default function Brands() {
   ]);
 
   return (
-    <section className='flex flex-col gap-6'>
-      <p className='mx-auto max-w-screen-xl px-6 text-center'>
+    <section className='flex flex-col gap-4'>
+      <p className='mx-auto max-w-screen-xl px-6 text-center text-base/[1.7rem] md:text-lg/[1.9rem]'>
         Worldwide Confidence: 2,000+ Businesses Trusting in Global Impact
       </p>
 
