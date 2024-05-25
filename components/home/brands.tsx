@@ -14,18 +14,24 @@ export default function Brands() {
         Worldwide Confidence: 2,000+ Businesses Trusting in Global Impact
       </p>
 
-      <div className='embla' ref={emblaRef}>
-        <div className='embla__container'>
-          {expandedBrands.map(({ name, src }, index) => (
-            <div
-              key={`brand-${index}`}
-              className='embla__slide mr-10 grayscale md:mr-20'
-            >
-              <img src={src} alt={name} />
-            </div>
-          ))}
-          <div />
+      <div className='relative'>
+        <div className='absolute left-0 top-0 z-10 h-full w-full max-w-20 bg-gradient-to-r from-[#f6f6f3] to-transparent sm:max-w-32' />
+
+        <div className='embla' ref={emblaRef}>
+          <div className='embla__container'>
+            {expandedBrands.map(({ name, src }, index) => (
+              <div
+                key={`brand-${index}`}
+                className='embla__slide mr-10 grayscale md:mr-20'
+              >
+                <img src={src} alt={name} />
+              </div>
+            ))}
+            <div />
+          </div>
         </div>
+
+        <div className='absolute right-0 top-0 z-10 h-full w-full max-w-20 bg-gradient-to-l from-[#f6f6f3] to-transparent sm:max-w-32' />
       </div>
     </section>
   );
