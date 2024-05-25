@@ -14,3 +14,10 @@
   flex: 0 0 auto;
   min-width: 0;
 }
+
+.hero-wrapper {
+  background-image: url('/images/hero/bg-image-1.png'), url('/images/hero/bg-image-2.png');
+  background-position: 0 0, 50%;
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 1455px;
+}
