@@ -17,9 +17,9 @@ const Logo = ({
   className,
   dark = false,
   ...props
-}: React.ComponentPropsWithoutRef<'div'> & Props) => {
+}: React.ComponentPropsWithoutRef<'span'> & Props) => {
   return (
-    <div
+    <span
       className={cn(
         'inline-flex text-2xl font-bold tracking-[0.09rem]',
         {
@@ -33,7 +33,7 @@ const Logo = ({
     >
       AvalonX
       {/* <LogoIcon dark={dark} className='-ml-1' /> */}
-    </div>
+    </span>
   );
 };
 
