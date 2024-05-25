@@ -176,10 +176,8 @@ type TextProps = {
 
 function HighlightText({ title, text, className }: TextProps) {
   return (
-    <li
-      className={cn('grid grid-cols-[auto,1fr] gap-1.5 md:gap-3.5', className)}
-    >
-      <Check className='w-4 shrink-0' />
+    <li className={cn('grid grid-cols-[auto,1fr] gap-2 md:gap-3.5', className)}>
+      <Check className='w-3 shrink-0 md:w-4' />
 
       <div className='text-lg font-medium text-black md:text-xl'>{title}</div>
 
