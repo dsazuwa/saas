@@ -5,8 +5,8 @@ import Pill from '../pill';
 
 export default function Blog() {
   return (
-    <section className='mx-auto max-w-screen-xl space-y-10 px-6'>
-      <div className='mx-auto flex max-w-screen-xl flex-col items-center gap-1 text-center'>
+    <section className='container mx-auto space-y-10 px-6'>
+      <div className='flex flex-col items-center gap-1 text-center'>
         <Pill>Our Blog</Pill>
 
         <h2 className='text-center text-[28px] font-medium md:text-[32px]'>

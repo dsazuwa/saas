@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 export default function CTA() {
   return (
     <section className='px-6'>
-      <div className='mx-auto grid w-full max-w-screen-xl gap-10 bg-black px-[25px] py-[50px] text-neutral-400 sm:grid-cols-2 md:grid-cols-11'>
+      <div className='container mx-auto grid w-full gap-10 bg-black px-[25px] py-[50px] text-neutral-400 sm:grid-cols-2 md:grid-cols-11'>
         <div className='flex flex-col gap-5 sm:col-span-2 md:col-span-5'>
           <h2 className='text-[28px] font-medium text-white md:text-[32px]'>
             Get started now

@@ -10,11 +10,9 @@ import { buttonVariants } from './ui/button';
 import { Logo } from './logo';
 
 export default function Footer() {
-  const linkStyle = 'text-sm text-neutral-300 hover:text-white';
-
   return (
     <div className='mt-auto bg-black text-neutral-400'>
-      <div className='mx-auto max-w-screen-xl px-6'>
+      <div className='container mx-auto px-6'>
         <div className='flex w-full flex-col gap-16 py-16 md:flex-row'>
           <LinkSection />
 

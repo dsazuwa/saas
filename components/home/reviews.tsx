@@ -12,7 +12,7 @@ export default function Reviews() {
 
   return (
     <section className='space-y-10 px-6'>
-      <div className='mx-auto flex max-w-screen-xl flex-col items-center gap-1 text-center'>
+      <div className='container mx-auto flex flex-col items-center gap-1 text-center'>
         <Pill>Testimonials</Pill>
 
         <h2 className='text-center text-[28px] font-medium md:text-[32px]'>

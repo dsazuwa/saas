@@ -2,7 +2,7 @@ import SubscribeField from './subscribe';
 
 export default function Hero() {
   return (
-    <section className='mx-auto grid max-w-screen-xl gap-5 px-6 md:grid-cols-[auto,1fr] md:items-center md:gap-24'>
+    <section className='container mx-auto grid gap-5 px-6 md:grid-cols-[auto,1fr] md:items-center md:gap-24'>
       <div className='space-y-5 max-md:text-center md:max-w-80 md:space-y-10'>
         <div className='space-y-3'>
           <h1 className='text-2xl font-semibold text-black md:text-4xl'>

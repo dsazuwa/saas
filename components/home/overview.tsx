@@ -6,7 +6,7 @@ import { buttonVariants } from '../ui/button';
 
 export default function Overview() {
   return (
-    <section className='mx-auto flex max-w-screen-xl flex-col gap-[10vh] p-6'>
+    <section className='container mx-auto flex flex-col gap-[10vh] p-6'>
       <div className='flex flex-col gap-[10vh]'>
         <HighlightSection
           className='md:flex-row-reverse'
@@ -176,7 +176,7 @@ type TextProps = {
 
 function HighlightText({ title, text, className }: TextProps) {
   return (
-    <li className={cn('grid grid-cols-[auto,1fr] gap-2 md:gap-3.5', className)}>
+    <li className={cn('grid grid-cols-[auto,1fr] gap-2 md:gap-2.5', className)}>
       <Check className='w-3 shrink-0 md:w-4' />
 
       <div className='text-lg font-medium text-black md:text-xl'>{title}</div>
