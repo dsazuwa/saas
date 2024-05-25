@@ -1,4 +1,5 @@
 import Footer from '@/components/footer';
+import CTA from '@/components/home/cta';
 import Brands from '@/components/home/brands';
 import FAQ from '@/components/home/faq';
 import Overview from '@/components/home/overview';
@@ -12,6 +13,7 @@ export default function Home() {
         <Overview />
         <Reviews />
         <FAQ />
+        <CTA />
       </main>
 
       <Footer />

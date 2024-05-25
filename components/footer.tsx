@@ -26,7 +26,7 @@ export default function Footer() {
             <div className='h-[1px] bg-neutral-700' />
 
             <a
-              href='mailto:dsazuwa@gmail.com'
+              href='mailto:joedoe@mail.com'
               target='_blank'
               rel='noopener noreferrer'
               className='text-sm text-neutral-300 hover:text-white'
