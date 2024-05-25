@@ -9,7 +9,7 @@ export default function Brands() {
   ]);
 
   return (
-    <section className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-4'>
       <p className='container mx-auto px-6 text-center text-base/[1.7rem] md:text-lg/[1.9rem]'>
         Worldwide Confidence: 2,000+ Businesses Trusting in Global Impact
       </p>
@@ -33,7 +33,7 @@ export default function Brands() {
 
         <div className='absolute right-0 top-0 z-10 h-full w-full max-w-20 bg-gradient-to-l from-[#f6f6f3] to-transparent sm:max-w-32' />
       </div>
-    </section>
+    </div>
   );
 }
 

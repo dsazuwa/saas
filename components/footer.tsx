@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import {
   FacebookIcon,
   IconType,
@@ -6,8 +7,8 @@ import {
   XIcon,
   YoutTubeIcon,
 } from './icons';
-import { buttonVariants } from './ui/button';
 import { Logo } from './logo';
+import { buttonVariants } from './ui/button';
 
 export default function Footer() {
   return (
@@ -28,17 +29,19 @@ export default function Footer() {
               target='_blank'
               rel='noopener noreferrer'
               className='text-sm text-neutral-300 hover:text-white'
+              aria-label='Send an email to joedoe@mail.com'
             >
               joedoe@mail.com
             </a>
 
             <a
-              href='tel:(208) 555-0112'
+              href='tel:(208)555-0112'
               target='_blank'
               rel='noopener noreferrer'
               className='text-sm text-neutral-300 hover:text-white'
+              aria-label='Call (208) 555-0112'
             >
-              (208)555-0112
+              (208) 555-0112
             </a>
           </div>
         </div>
@@ -47,10 +50,26 @@ export default function Footer() {
           <div>© 2024 AvalonX. All Rights Reserved.</div>
 
           <div className='inline-flex flex-wrap gap-1 max-sm:m-[-6px]'>
-            <IconLink href='https://twitter.com' Icon={XIcon} />
-            <IconLink href='https://facebook.com' Icon={FacebookIcon} />
-            <IconLink href='https://youtube.com' Icon={YoutTubeIcon} />
-            <IconLink href='https://instagram.com' Icon={InstagramIcon} />
+            <IconLink
+              href='https://twitter.com'
+              Icon={XIcon}
+              ariaLabel='Visit our Twitter page'
+            />
+            <IconLink
+              href='https://facebook.com'
+              Icon={FacebookIcon}
+              ariaLabel='Visit our Facebook page'
+            />
+            <IconLink
+              href='https://youtube.com'
+              Icon={YoutTubeIcon}
+              ariaLabel='Visit our YouTube channel'
+            />
+            <IconLink
+              href='https://instagram.com'
+              Icon={InstagramIcon}
+              ariaLabel='Visit our Instagram page'
+            />
           </div>
         </div>
       </div>
@@ -73,6 +92,7 @@ function LinkSection() {
               key={`${section}-link-${index}`}
               href={href}
               className='min-w-0 capitalize transition-colors hover:text-white'
+              aria-label={`Go to ${name} Page`}
             >
               {name}
             </Link>
@@ -83,15 +103,16 @@ function LinkSection() {
   );
 }
 
-type IconLinkProps = { href: string; Icon: IconType };
+type IconLinkProps = { href: string; Icon: IconType; ariaLabel: string };
 
-function IconLink({ href, Icon }: IconLinkProps) {
+function IconLink({ href, Icon, ariaLabel }: IconLinkProps) {
   return (
     <a
       href={href}
       target='_blank'
       rel='noopener noreferrer'
       className={buttonVariants({ variant: 'ghostDark', size: 'icon' })}
+      aria-label={ariaLabel}
     >
       <Icon className='h-5 fill-white' />
     </a>

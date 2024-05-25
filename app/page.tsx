@@ -1,6 +1,5 @@
 import Footer from '@/components/footer';
 import Blog from '@/components/home/blog';
-import Brands from '@/components/home/brands';
 import CTA from '@/components/home/cta';
 import FAQ from '@/components/home/faq';
 import Hero from '@/components/home/hero';
@@ -11,11 +10,7 @@ export default function Home() {
   return (
     <>
       <main className='flex w-full flex-col gap-[10vh] pb-[10vh]'>
-        <div className='space-y-6'>
-          <Hero />
-          <Brands />
-        </div>
-
+        <Hero />
         <Overview />
         <Blog />
         <Reviews />

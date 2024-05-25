@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react';
+import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
@@ -137,7 +138,7 @@ function HighlightSection({
   return (
     <div
       className={cn(
-        'flex flex-col gap-5 md:flex-row md:items-center md:gap-10 lg:gap-[3.75rem]',
+        'flex flex-col gap-8 md:flex-row md:items-center md:gap-10 lg:gap-[3.75rem]',
         className,
       )}
     >
@@ -153,16 +154,20 @@ function HighlightSection({
         </div>
       </div>
 
-      <div className='space-y-8 md:w-1/2'>
-        <h3 className='text-2xl font-medium text-black md:text-3xl'>
+      <div className='space-y-5 md:w-1/2'>
+        <div className='text-2xl font-medium text-black md:text-3xl'>
           {heading}
-        </h3>
+        </div>
 
         {children}
 
-        <a className={buttonVariants()} href='/features'>
+        <Link
+          className={buttonVariants()}
+          href='/features'
+          aria-label='Go to Features Page'
+        >
           {linkText}
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -191,7 +196,7 @@ function HighlightText({ title, text, className }: TextProps) {
 function OverviewText({ title, text, className }: TextProps) {
   return (
     <div className={cn('flex flex-col gap-2 px-2 pb-2', className)}>
-      <h4 className='text-lg font-medium text-black'>{title}</h4>
+      <div className='text-lg font-medium text-black'>{title}</div>
 
       <p className='text-base/[1.7rem]'>{text}</p>
     </div>

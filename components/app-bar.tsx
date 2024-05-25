@@ -6,7 +6,7 @@ import AppBarDropDown from './app-bar-dropdown';
 export default function AppBar() {
   return (
     <nav className='container mx-auto inline-flex w-full items-center p-6 max-md:justify-between md:gap-6'>
-      <Link href='/'>
+      <Link href='/' aria-label='Go to Home page'>
         <Logo />
       </Link>
 
@@ -16,20 +16,26 @@ export default function AppBar() {
             <Link
               key={`nav-link-${index}`}
               href={href}
-              className='text-sm font-medium hover:text-black'
+              className='text-sm font-medium hover:text-black hover:underline'
+              aria-label={`Go to ${name} Page`}
             >
               {name}
             </Link>
           ))}
         </div>
 
-        <Link href='/login' className='text-sm font-medium hover:text-black'>
+        <Link
+          href='/login'
+          className='text-sm font-medium hover:text-black hover:underline'
+          aria-label='Go to Sign In Page'
+        >
           Sign In
         </Link>
 
         <Link
           href='/register'
           className='rounded-md border border-black px-5 py-3 text-sm font-medium hover:bg-black hover:text-white'
+          aria-label='Go to Register Page'
         >
           Get Started
         </Link>

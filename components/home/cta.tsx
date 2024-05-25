@@ -8,9 +8,9 @@ export default function CTA() {
     <section className='px-6'>
       <div className='container mx-auto grid w-full gap-10 bg-black px-[25px] py-[50px] text-neutral-400 sm:grid-cols-2 md:grid-cols-11'>
         <div className='flex flex-col gap-5 sm:col-span-2 md:col-span-5'>
-          <h2 className='text-[28px] font-medium text-white md:text-[32px]'>
+          <div className='text-[28px] font-medium text-white md:text-[32px]'>
             Get started now
-          </h2>
+          </div>
 
           <div className='aspect-[16/5.7385]'>
             <img
@@ -30,6 +30,7 @@ export default function CTA() {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='ml-1 text-sm text-neutral-300 hover:text-white'
+                aria-label='Send an email to joedoe@mail.com'
               >
                 joedoe@mail.com
               </a>
@@ -40,6 +41,7 @@ export default function CTA() {
               target='_blank'
               rel='noopener noreferrer'
               className='text-sm text-neutral-300 hover:text-white'
+              aria-label='Call (208) 555-0112'
             >
               (208) 555-0112
             </a>
@@ -53,6 +55,7 @@ export default function CTA() {
             <Link
               href='/register'
               className='text-sm text-neutral-300 hover:text-white'
+              aria-label='Go to Register Page'
             >
               Join us today
             </Link>
@@ -74,7 +77,7 @@ function Action({
 }) {
   return (
     <div className={cn('flex h-full flex-col gap-5', className)}>
-      <h3 className='text-xl font-medium text-white md:text-2xl'>{title}</h3>
+      <div className='text-xl font-medium text-white md:text-2xl'>{title}</div>
 
       {children}
     </div>

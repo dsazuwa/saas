@@ -12,7 +12,11 @@ export default function SubscribeField() {
         />
       </div>
 
-      <Button type='submit' className='m-0.5'>
+      <Button
+        type='submit'
+        className='m-0.5'
+        aria-label='Subscribe to our newsletter'
+      >
         Get Started
       </Button>
     </form>

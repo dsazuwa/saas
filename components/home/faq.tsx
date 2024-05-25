@@ -12,9 +12,9 @@ export default function FAQ() {
       <div className='flex flex-col items-center gap-1'>
         <Pill>FAQs</Pill>
 
-        <h2 className='text-center text-[28px] font-medium md:text-[32px]'>
+        <div className='text-center text-[28px] font-medium md:text-[32px]'>
           Frequently Asked Questions
-        </h2>
+        </div>
       </div>
 
       <Accordion type='single' collapsible className='mx-auto max-w-4xl'>

@@ -18,7 +18,11 @@ export default function NotFound() {
         changed or is temporarily unavailable.
       </div>
 
-      <Link href='/' className={cn(buttonVariants())}>
+      <Link
+        href='/'
+        className={cn(buttonVariants())}
+        aria-label='Go to Home page'
+      >
         Back to Home
       </Link>
     </div>

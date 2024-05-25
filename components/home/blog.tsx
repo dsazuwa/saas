@@ -9,9 +9,9 @@ export default function Blog() {
       <div className='flex flex-col items-center gap-1 text-center'>
         <Pill>Our Blog</Pill>
 
-        <h2 className='text-center text-[28px] font-medium md:text-[32px]'>
+        <div className='text-center text-[28px] font-medium md:text-[32px]'>
           Articles & Resources
-        </h2>
+        </div>
       </div>
 
       <div className='grid gap-6 sm:grid-cols-3'>
@@ -29,7 +29,11 @@ function Article({
   article: TArticle;
 }) {
   return (
-    <Link href={href} className='space-y-3.5 '>
+    <Link
+      href={href}
+      className='space-y-3.5'
+      aria-label={`Open blog post: ${name}`}
+    >
       <div className='aspect-[3/2.4]'>
         <img src={img} alt={name} className='h-full w-full object-cover' />
       </div>
@@ -41,7 +45,7 @@ function Article({
           <span className='text-sm'>{format(postedAt, 'MMMM dd, yyyy')}</span>
         </div>
 
-        <h3 className='text-xl font-medium md:text-2xl'>{name}</h3>
+        <div className='text-xl font-medium md:text-2xl'>{name}</div>
       </div>
     </Link>
   );

@@ -15,9 +15,9 @@ export default function Reviews() {
       <div className='container mx-auto flex flex-col items-center gap-1 text-center'>
         <Pill>Testimonials</Pill>
 
-        <h2 className='text-center text-[28px] font-medium md:text-[32px]'>
+        <div className='text-center text-[28px] font-medium md:text-[32px]'>
           Customer Reviews
-        </h2>
+        </div>
       </div>
 
       <div className='embla' ref={emblaRef}>
