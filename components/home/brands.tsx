@@ -3,6 +3,8 @@
 import AutoScroll from 'embla-carousel-auto-scroll';
 import useEmblaCarousel from 'embla-carousel-react';
 
+import Image from '../image';
+
 export default function Brands() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     AutoScroll({ playOnInit: true, speed: 1 }),
@@ -19,12 +21,12 @@ export default function Brands() {
 
         <div className='embla' ref={emblaRef}>
           <div className='embla__container'>
-            {expandedBrands.map(({ name, src }, index) => (
+            {expandedBrands.map(({ name, photoUrl }, index) => (
               <div
                 key={`brand-${index}`}
                 className='embla__slide mr-10 grayscale md:mr-20'
               >
-                <img src={src} alt={name} />
+                <Image src={photoUrl} alt={name} priority cover />
               </div>
             ))}
             <div />
@@ -37,16 +39,16 @@ export default function Brands() {
   );
 }
 
-type TBrand = { name: string; src: string };
+type TBrand = { name: string; photoUrl: string };
 
 const brands: TBrand[] = [
-  { name: 'Capsule', src: '/images/logos/capsule.svg' },
-  { name: 'Command+R', src: '/images/logos/command-r.svg' },
-  { name: 'Hourglass', src: '/images/logos/hourglass.svg' },
-  { name: 'Lightbox', src: '/images/logos/lightbox.svg' },
-  { name: 'Luminous', src: '/images/logos/luminous.svg' },
-  { name: 'Spherule', src: '/images/logos/spherule.svg' },
-  { name: 'Webflow', src: '/images/logos/webflow.svg' },
+  { name: 'Capsule', photoUrl: 'capsule' },
+  { name: 'Command+R', photoUrl: 'command-r' },
+  { name: 'Hourglass', photoUrl: 'hourglass' },
+  { name: 'Lightbox', photoUrl: 'lightbox' },
+  { name: 'Luminous', photoUrl: 'luminous' },
+  { name: 'Spherule', photoUrl: 'spherule' },
+  { name: 'Webflow', photoUrl: 'webflow' },
 ];
 
 const expandedBrands: TBrand[] = Array(3)

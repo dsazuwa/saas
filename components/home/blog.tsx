@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
 import Link from 'next/link';
 
+import Image from '../image';
 import Pill from '../pill';
 
 export default function Blog() {
@@ -24,7 +25,7 @@ export default function Blog() {
 }
 
 function Article({
-  article: { name, tag, postedAt, img, href },
+  article: { name, tag, postedAt, photoUrl, href },
 }: {
   article: TArticle;
 }) {
@@ -35,7 +36,7 @@ function Article({
       aria-label={`Open blog post: ${name}`}
     >
       <div className='aspect-[3/2.4]'>
-        <img src={img} alt={name} className='h-full w-full object-cover' />
+        <Image src={photoUrl} alt={name} cover />
       </div>
 
       <div className='space-y-3'>
@@ -55,7 +56,7 @@ type TArticle = {
   name: string;
   tag: string;
   postedAt: Date;
-  img: string;
+  photoUrl: string;
   href: string;
 };
 
@@ -64,21 +65,21 @@ const articles: TArticle[] = [
     name: 'Stay up-to-date with the latest developments, product , industry insights.',
     tag: 'Newsfeed',
     postedAt: new Date('2024-04-25'),
-    img: '/images/blogs/blog-1.jpg',
+    photoUrl: 'blog-1',
     href: '',
   },
   {
     name: 'Articles to expert interviews, Perspectives offers a deeper.',
     tag: 'Perspectives',
     postedAt: new Date('2024-04-24'),
-    img: '/images/blogs/blog-2.jpg',
+    photoUrl: 'blog-2',
     href: '',
   },
   {
     name: 'In this section, we showcase the power in a platform through feature.',
     tag: 'Featurette',
     postedAt: new Date('2024-04-24'),
-    img: '/images/blogs/blog-3.jpg',
+    photoUrl: 'blog-3',
     href: '',
   },
 ];

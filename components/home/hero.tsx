@@ -1,11 +1,12 @@
 import AppBar from '../app-bar';
+import Image from '../image';
 import Brands from './brands';
 import SubscribeField from './subscribe';
 
 export default function Hero() {
   return (
     <div>
-      <div className='hero-wrapper mb-6 flex flex-col'>
+      <div className='hero-wrapper mb-6 flex flex-col bg-hero-blur'>
         <AppBar />
 
         <section className='space-y-6'>
@@ -26,11 +27,7 @@ export default function Hero() {
             </div>
 
             <div className='aspect-[800/654] h-full w-full'>
-              <img
-                src='/images/hero/img.jpg'
-                alt='Hero Image'
-                className='h-full w-full'
-              />
+              <Image src='hero' alt='Hero Image' priority />
             </div>
           </div>
         </section>

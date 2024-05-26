@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
+import Image from '../image';
 import { buttonVariants } from '../ui/button';
 
 export default function Overview() {
@@ -12,9 +13,9 @@ export default function Overview() {
         <HighlightSection
           className='md:flex-row-reverse'
           heading='Your source of better living'
-          src='/images/overview/info-1.jpg'
+          photoUrl='info-1'
           alt='Overview Highlight 1'
-          graphicSrc='/images/overview/info-graphic-1.png'
+          graphicPhotoUrl='info-graphic-1'
           graphicAlt='Info Graphic 1'
           linkText='Discover More'
         >
@@ -38,9 +39,9 @@ export default function Overview() {
 
         <HighlightSection
           heading='Quality of a product'
-          src='/images/overview/info-2.jpg'
+          photoUrl='info-2'
           alt='Overview Highlight 2'
-          graphicSrc='/images/overview/info-graphic-2.png'
+          graphicPhotoUrl='info-graphic-2'
           graphicAlt='Info Graphic 2'
           linkText='Explorer More'
         >
@@ -63,11 +64,7 @@ export default function Overview() {
       <div className='grid grid-cols-2 gap-5'>
         <div className='col-span-2 flex flex-col gap-6 border-neutral-200 bg-white p-2 sm:p-12 md:col-span-1 md:gap-12'>
           <div className='aspect-[3/1.7565] w-full'>
-            <img
-              src='/images/overview/overview-img-1.png'
-              alt='Overview Image 1'
-              className='h-full w-full'
-            />
+            <Image src='overview-img-1' alt='Overview Image 1' />
           </div>
 
           <OverviewText
@@ -80,11 +77,7 @@ export default function Overview() {
 
         <div className='col-span-2 flex flex-col gap-6 border-neutral-200 bg-white p-2 sm:p-12 md:col-span-1 md:gap-12'>
           <div className='aspect-[3/1.7565] w-full'>
-            <img
-              src='/images/overview/overview-img-2.png'
-              alt='Overview Image 2'
-              className='h-full w-full'
-            />
+            <Image src='overview-img-2' alt='Overview Image 2' />
           </div>
 
           <OverviewText
@@ -97,11 +90,7 @@ export default function Overview() {
 
         <div className='col-span-2 flex min-h-0 flex-col items-start gap-6 border-neutral-200 bg-white p-2 sm:p-12 md:gap-12 lg:flex-row'>
           <div className='aspect-[8/1.678] w-full lg:w-7/12'>
-            <img
-              src='/images/overview/overview-img-3.svg'
-              alt='Overview Image 3'
-              className='h-full w-full'
-            />
+            <Image src='overview-img-3' alt='Overview Image 3' />
           </div>
 
           <OverviewText
@@ -119,18 +108,18 @@ export default function Overview() {
 function HighlightSection({
   className,
   heading,
-  src,
+  photoUrl,
   alt,
-  graphicSrc,
+  graphicPhotoUrl,
   graphicAlt,
   linkText,
   children,
 }: {
   className?: string;
   heading: string;
-  src: string;
+  photoUrl: string;
   alt: string;
-  graphicSrc: string;
+  graphicPhotoUrl: string;
   graphicAlt: string;
   linkText: string;
   children: ReactNode;
@@ -143,14 +132,10 @@ function HighlightSection({
       )}
     >
       <div className='relative aspect-square overflow-hidden md:w-1/2'>
-        <img src={src} alt={alt} className='h-full w-full object-cover' />
+        <Image src={photoUrl} alt={alt} cover />
 
-        <div className='absolute bottom-2 left-2 max-w-[70%] rounded-[8px] bg-img-blur p-2 md:bottom-5 md:left-5 md:p-5'>
-          <img
-            src={graphicSrc}
-            alt={graphicAlt}
-            className='h-full w-full  object-cover'
-          />
+        <div className='absolute bottom-2 left-2 aspect-[3/1.5] w-[60%] rounded-sm bg-img-blur p-2 md:bottom-5 md:left-5 md:p-5'>
+          <Image src={graphicPhotoUrl} alt={graphicAlt} cover />
         </div>
       </div>
 

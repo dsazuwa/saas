@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
+import Image from '../image';
 
 export default function CTA() {
   return (
@@ -13,11 +14,7 @@ export default function CTA() {
           </div>
 
           <div className='aspect-[16/5.7385]'>
-            <img
-              src='/images/cta-img.png'
-              alt='Call to action image'
-              className='h-full w-full object-cover'
-            />
+            <Image src='cta-img' alt='Call to action image' cover dark />
           </div>
         </div>
 

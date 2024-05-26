@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 
+const CDN = process.env.NEXT_PUBLIC_CDN_URL;
+
 const config = {
   darkMode: ['class'],
   content: [
@@ -27,7 +29,8 @@ const config = {
       },
 
       backgroundImage: {
-        'img-blur': "url('/images/overview/background-image.png')",
+        'img-blur': `url('${CDN}/graphic-bg')`,
+        'hero-blur': `url('${CDN}/hero-bg-1'), url('${CDN}/hero-bg-2')`,
       },
 
       keyframes: {
