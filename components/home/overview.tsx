@@ -134,8 +134,13 @@ function HighlightSection({
       <div className='relative aspect-square overflow-hidden md:w-1/2'>
         <Image src={photoUrl} alt={alt} cover />
 
-        <div className='absolute bottom-2 left-2 aspect-[3/1.5] w-[60%] rounded-sm bg-img-blur p-2 md:bottom-5 md:left-5 lg:p-4'>
-          <Image src={graphicPhotoUrl} alt={graphicAlt} />
+        <div className='absolute bottom-2 left-2 w-[60%] rounded-sm bg-img-blur p-2 md:bottom-5 md:left-5 lg:p-4'>
+          <Image
+            src={graphicPhotoUrl}
+            alt={graphicAlt}
+            height={612}
+            width={244}
+          />
         </div>
       </div>
 
