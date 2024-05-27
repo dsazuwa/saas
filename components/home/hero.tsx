@@ -9,26 +9,24 @@ export default function Hero() {
       <div className='hero-wrapper mb-6 flex flex-col bg-hero-blur'>
         <AppBar />
 
-        <section className='space-y-6'>
-          <div className='container mx-auto grid gap-5 px-6 pb-6 md:grid-cols-[auto,1fr] md:items-center md:gap-24'>
-            <div className='space-y-5 max-md:text-center md:max-w-80 md:space-y-10'>
-              <div className='space-y-3'>
-                <p className='text-2xl font-semibold text-black md:text-4xl'>
-                  Empowering digital success.
-                </p>
+        <section className='container mx-auto flex flex-col gap-5 p-6 md:flex-row md:items-center md:gap-16'>
+          <div className='space-y-5 max-md:text-center md:max-w-80 md:space-y-10'>
+            <div className='space-y-3'>
+              <p className='text-2xl font-semibold text-black md:text-4xl'>
+                Empowering digital success.
+              </p>
 
-                <p className='md:text-lg'>
-                  Revolutionizing patient care efficiency with intuitive SaaS
-                  solutions tailored for busy healthcare environments.
-                </p>
-              </div>
-
-              <SubscribeField />
+              <p className='md:text-lg'>
+                Revolutionizing patient care efficiency with intuitive SaaS
+                solutions tailored for busy healthcare environments.
+              </p>
             </div>
 
-            <div className='aspect-[800/654] h-full w-full'>
-              <Image src='hero' alt='Hero Image' priority />
-            </div>
+            <SubscribeField />
+          </div>
+
+          <div className='aspect-[800/654] h-full w-full'>
+            <Image src='hero' alt='Hero Image' priority />
           </div>
         </section>
       </div>

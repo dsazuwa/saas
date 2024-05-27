@@ -12,7 +12,7 @@ export default function Brands() {
 
   return (
     <div className='flex flex-col gap-4'>
-      <p className='container mx-auto px-6 text-center text-base/[1.7rem] md:text-lg/[1.9rem]'>
+      <p className='container mx-auto px-6 text-center max-md:text-sm'>
         Worldwide Confidence: 2,000+ Businesses Trusting in Global Impact
       </p>
 
@@ -26,7 +26,13 @@ export default function Brands() {
                 key={`brand-${index}`}
                 className='embla__slide mr-10 grayscale md:mr-20'
               >
-                <Image src={photoUrl} alt={name} priority cover />
+                <Image
+                  src={photoUrl}
+                  alt={name}
+                  priority
+                  cover
+                  className='max-w-36'
+                />
               </div>
             ))}
             <div />
