@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
-const CDN = process.env.NEXT_PUBLIC_CDN_URL;
+const CDN =
+  'https://res.cloudinary.com/dcdakh7gh/image/upload/v1715361000/saas-avalonx';
 
 const config = {
   darkMode: ['class'],
