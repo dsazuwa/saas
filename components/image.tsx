@@ -1,12 +1,10 @@
 'use client';
 
-import NextImage, { ImageLoaderProps, ImageProps } from 'next/image';
+import NextImage, { ImageProps } from 'next/image';
 import { SyntheticEvent, useState } from 'react';
 
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
-
-const CDN = process.env.NEXT_PUBLIC_CDN_URL;
 
 type Props = ImageProps & { cover?: boolean; dark?: boolean };
 
@@ -18,28 +16,17 @@ export default function Image(props: Props) {
   );
 }
 
-function PriorityImage({ src, className, cover, ...props }: Props) {
+function PriorityImage({ className, cover, ...props }: Props) {
   return (
     <NextImage
-      width={0}
       height={0}
-      sizes='100vw'
-      priority
-      src={`${CDN}/${src}`}
-      className={cn('h-full w-full', cover && 'object-cover', className)}
       {...props}
+      className={cn('h-full w-full', cover && 'object-cover', className)}
     />
   );
 }
 
-function LazyLoadImage({
-  src,
-  className,
-  cover,
-  dark,
-  onLoad,
-  ...props
-}: Props) {
+function LazyLoadImage({ className, cover, dark, onLoad, ...props }: Props) {
   const [loaded, setLoaded] = useState(false);
 
   const handleLoad = (e: SyntheticEvent<HTMLImageElement, Event>) => {
@@ -60,25 +47,20 @@ function LazyLoadImage({
       )}
 
       <NextImage
-        src={`${CDN}/${src}`}
         width={0}
         height={0}
         sizes='100vw'
+        {...props}
+        // sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className={cn(className, {
           'h-full w-full': loaded,
           'h-0 w-auto': !loaded,
           'object-cover': cover,
         })}
         onLoad={handleLoad}
-        {...props}
       />
     </>
   );
 }
 
-function cloudinaryLoader({ src, width, quality }: ImageLoaderProps) {
-  const params = ['f_auto', 'c_limit', `w_${width}`, `q_${quality || 'auto'}`];
-  return `${CDN}/${params.join(',')}/${src}`;
-}
-
-export { LazyLoadImage, PriorityImage, cloudinaryLoader };
+export { LazyLoadImage, PriorityImage };

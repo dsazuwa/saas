@@ -26,13 +26,7 @@ export default function Brands() {
                 key={`brand-${index}`}
                 className='embla__slide mr-10 grayscale md:mr-20'
               >
-                <Image
-                  src={photoUrl}
-                  alt={name}
-                  priority
-                  cover
-                  className='max-w-36'
-                />
+                <Image src={photoUrl} alt={name} width={120} priority cover />
               </div>
             ))}
             <div />
