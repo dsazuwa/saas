@@ -19,7 +19,7 @@ export default function CTA() {
         </div>
 
         <Action title='Contact us' className='md:col-span-3'>
-          <div className='flex h-full flex-col justify-between'>
+          <div className='flex h-full flex-col justify-between gap-4'>
             <p>
               If contacting us by email, send your inquiry to
               <a
@@ -46,7 +46,7 @@ export default function CTA() {
         </Action>
 
         <Action title='Sign up now' className='md:col-span-3'>
-          <div className='flex h-full flex-col justify-between'>
+          <div className='flex h-full flex-col justify-between gap-4'>
             <p>Sign up now for instant access to in our platform.</p>
 
             <Link
