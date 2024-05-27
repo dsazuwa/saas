@@ -19,6 +19,7 @@ export default function Image(props: Props) {
 function PriorityImage({ className, cover, ...props }: Props) {
   return (
     <NextImage
+      width={0}
       height={0}
       {...props}
       className={cn('h-full w-full', cover && 'object-cover', className)}
@@ -52,10 +53,11 @@ function LazyLoadImage({ className, cover, dark, onLoad, ...props }: Props) {
         sizes='100vw'
         {...props}
         // sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-        className={cn(className, {
+        className={cn({
           'h-full w-full': loaded,
           'h-0 w-auto': !loaded,
           'object-cover': cover,
+          className,
         })}
         onLoad={handleLoad}
       />
