@@ -32,7 +32,6 @@ export default function Brands() {
                   className='h-auto w-[120px]'
                   width={140}
                   height={40}
-                  priority
                   cover
                 />
               </div>
