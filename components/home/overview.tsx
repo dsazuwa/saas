@@ -19,7 +19,7 @@ export default function Overview() {
           graphicAlt='Info Graphic 1'
           linkText='Discover More'
         >
-          <ul className='space-y-4 text-base/[1.7rem] md:space-y-6 md:text-lg/[1.9rem]'>
+          <ul className='space-y-4 text-base/[1.7rem] md:space-y-6 lg:text-lg/[1.9rem]'>
             <HighlightText
               title='Assessment'
               text='Thoroughly understanding your needs to pave the way for personalized care. Thoroughly understanding your needs to pave the way for personalized care.'
@@ -45,7 +45,7 @@ export default function Overview() {
           graphicAlt='Info Graphic 2'
           linkText='Explorer More'
         >
-          <div className='space-y-4 text-base/[1.7rem] md:text-lg/[1.9rem]'>
+          <div className='space-y-4 text-base/[1.7rem] lg:text-lg/[1.9rem]'>
             <p>
               Our range of products offers robust solutions for tracking and
               analyzing website data, providing valuable insights into user
@@ -134,13 +134,13 @@ function HighlightSection({
       <div className='relative aspect-square overflow-hidden md:w-1/2'>
         <Image src={photoUrl} alt={alt} cover />
 
-        <div className='absolute bottom-2 left-2 aspect-[3/1.5] w-[60%] rounded-sm bg-img-blur p-2 md:bottom-5 md:left-5 md:p-5'>
-          <Image src={graphicPhotoUrl} alt={graphicAlt} cover />
+        <div className='absolute bottom-2 left-2 aspect-[3/1.5] w-[60%] rounded-sm bg-img-blur p-2 md:bottom-5 md:left-5 lg:p-4'>
+          <Image src={graphicPhotoUrl} alt={graphicAlt} />
         </div>
       </div>
 
       <div className='space-y-5 md:w-1/2'>
-        <div className='text-2xl font-medium text-black md:text-3xl'>
+        <div className='text-2xl font-medium text-black lg:text-3xl'>
           {heading}
         </div>
 
@@ -169,9 +169,9 @@ function HighlightText({ title, text, className }: TextProps) {
     <li className={cn('grid grid-cols-[auto,1fr] gap-2 md:gap-2.5', className)}>
       <Check className='w-3 shrink-0 md:w-4' />
 
-      <div className='text-lg font-medium text-black md:text-xl'>{title}</div>
+      <div className='text-lg font-medium text-black lg:text-xl'>{title}</div>
 
-      <div className='col-start-2 text-base/[1.7rem] md:text-lg/[1.9rem]'>
+      <div className='col-start-2 text-base/[1.7rem] lg:text-lg/[1.9rem]'>
         {text}
       </div>
     </li>

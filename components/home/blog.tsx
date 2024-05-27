@@ -15,7 +15,7 @@ export default function Blog() {
         </div>
       </div>
 
-      <div className='grid gap-6 sm:grid-cols-3'>
+      <div className='grid gap-12 sm:grid-cols-3 sm:gap-6'>
         {articles.map((article, index) => (
           <Article key={`article-${index}`} article={article} />
         ))}
@@ -40,7 +40,7 @@ function Article({
       </div>
 
       <div className='space-y-3'>
-        <div className='flex flex-row flex-wrap items-center gap-3'>
+        <div className='flex flex-row flex-wrap items-center gap-2'>
           <Pill>{tag}</Pill>
 
           <span className='text-sm'>{format(postedAt, 'MMMM dd, yyyy')}</span>
