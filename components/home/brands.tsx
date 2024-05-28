@@ -24,12 +24,11 @@ export default function Brands() {
             {expandedBrands.map(({ name, photoUrl }, index) => (
               <div
                 key={`brand-${index}`}
-                className='embla__slide mr-10 grayscale md:mr-20'
+                className='embla__slide mr-10 max-w-[120px] grayscale md:mr-20'
               >
                 <Image
                   src={photoUrl}
                   alt={name}
-                  className='h-auto w-[120px]'
                   width={140}
                   height={40}
                   cover
